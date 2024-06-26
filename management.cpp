@@ -76,12 +76,10 @@ void Management::showAccounts()
         return;
     }
 
-    std::cout << "\nKontoliste:\n"
-              << std::endl;
+    std::cout << "\nKontoliste:\n" << std::endl;
     std::cout << std::left;
     std::cout << " -----------------------------------------" << std::endl;
-    std::cout << std::setw(21) << "|Nachname" << std::setw(21) << "|Vorname"
-              << "|" << std::endl;
+    std::cout << std::setw(21) << "|Nachname" << std::setw(21) << "|Vorname" << "|" << std::endl;
     std::cout << "|--------------------|--------------------|" << std::endl;
     while (current != nullptr)
     {
@@ -111,8 +109,7 @@ void Management::accountManagement(std::string firstName, std::string lastName)
     Account *account;
     if ((account = findAccount(lastName, firstName)) == nullptr)
     {
-        std::cout << "Konto nicht vorhanden.\n"
-                  << std::endl;
+        std::cout << "Konto nicht vorhanden.\n"<< std::endl;
         return;
     }
     while (true)
@@ -167,8 +164,7 @@ void Management::accountManagement(std::string firstName, std::string lastName)
 
             if ((recipient = findAccount(lastName, firstName)) == nullptr)
             {
-                std::cout << "Empfängerkonto nicht vorhanden.\n"
-                          << std::endl;
+                std::cout << "Empfängerkonto nicht vorhanden.\n"<< std::endl;
                 return;
             }
 
@@ -212,8 +208,7 @@ void Management::deleteAccount()
 
     if ((account = findAccount(lastName, firstName)) == nullptr)
     {
-        std::cout << "Konto nicht vorhanden.\n"
-                  << std::endl;
+        std::cout << "Konto nicht vorhanden.\n"<< std::endl;
         return;
     }
 
@@ -283,8 +278,7 @@ void Management::loadAccounts()
 
     if (!inputFile.is_open())
     {
-        std::cerr << "Fehler beim Öffnen der Datei " << fileName << std::endl
-                  << "Keine Daten geladen" << std::endl;
+        std::cerr << "Fehler beim Öffnen der Datei " << fileName << std::endl << "Keine Daten geladen" << std::endl;
         return;
     }
 

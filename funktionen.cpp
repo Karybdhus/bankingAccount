@@ -2,13 +2,13 @@
 
 bool checkInputLength(std::string input, unsigned int length)
 {
-   if (input.length() > length)
-   {
-       std::cout << "Eingabe zu lang. Maximal " << length << " Zeichen." << std::endl;
-       std::cout << "Erneute Eingabe: " << std::endl;
-       return false;
-   }
-   return true;
+    if (input.length() > length)
+    {
+        std::cout << "Eingabe zu lang. Maximal " << length << " Zeichen." << std::endl;
+        std::cout << "Erneute Eingabe: " << std::endl;
+        return false;
+    }
+    return true;
 }
 
 void showMenu()
